@@ -16,6 +16,8 @@ public class Scenario_Login extends Base_Class{
 	@Test(dataProvider = "Invalid_Login",dataProviderClass=dataProvider.DP_Login.class, groups={"Regression"})
 	public void InvalidLogin(String TC_ID, String Order, String uname, String pwd, String expected)
 	{		
+		
+		System.out.println("Start invalid login");
 		//driver.findElement(By.linkText("Sign In")).click();
 		Pagefactory_HomePage home = new Pagefactory_HomePage(driver);
 		home.Click_SignIn();
